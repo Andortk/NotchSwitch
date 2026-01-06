@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./NotchSwitch-logo-black50-non-metallic-y.png" alt="NotchSwitch" width="200">
+  <img src="./assets/NotchSwitch-logo-black50-non-metallic-y.png" alt="NotchSwitch" width="200">
 
   <h1>NotchSwitch</h1>
   <p><strong>Dynamic Island-style app switcher for MacBook Pro</strong></p>
@@ -30,7 +30,7 @@
 <br>
 
 <div align="center">
-  <img src="./Resources/screenshot.png" alt="NotchSwitch Screenshot" width="600"/>
+  <img src="./assets/NotchSwitch-logo-black33-non-metallic-y-500.png" alt="NotchSwitch Screenshot" width="600"/>
 </div>
 
 <br>

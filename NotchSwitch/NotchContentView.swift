@@ -4,6 +4,8 @@ struct NotchContentView: View {
     @ObservedObject var viewModel: NotchViewModel
     @ObservedObject var config = AppConfiguration.shared
     @State private var isHovering = false
+    @State private var isSettingsHovered = false
+    @State private var isMultiButtonHovered = false
     
     private let notchWidth: CGFloat = 200
     private let notchHeight: CGFloat = 34
@@ -80,18 +82,23 @@ struct NotchContentView: View {
         Button(action: viewModel.openSettings) {
             ZStack {
                 Circle()
-                    .fill(Color.white.opacity(0.08))
+                    .fill(Color.white.opacity(isSettingsHovered ? 0.15 : 0.08))
                     .frame(width: 26, height: 26)
                 
                 Image(systemName: "gearshape.fill")
                     .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(.white.opacity(0.6))
+                    .foregroundColor(.white.opacity(isSettingsHovered ? 0.85 : 0.6))
             }
+            .animation(.easeInOut(duration: 0.15), value: isSettingsHovered)
         }
         .buttonStyle(PlainButtonStyle())
         .onHover { hovering in
-            NSCursor.pointingHand.push()
-            if !hovering { NSCursor.pop() }
+            isSettingsHovered = hovering
+            if hovering {
+                NSCursor.pointingHand.push()
+            } else {
+                NSCursor.pop()
+            }
         }
     }
     
@@ -103,14 +110,18 @@ struct NotchContentView: View {
     private var multiButton: some View {
         ZStack {
             Circle()
-                .fill(Color.white.opacity(0.08))
+                .fill(Color.white.opacity(isMultiButtonHovered ? 0.15 : 0.08))
                 .frame(width: 26, height: 26)
             
             Circle()
-                .fill(Color.white.opacity(0.6))
+                .fill(Color.white.opacity(isMultiButtonHovered ? 0.85 : 0.6))
                 .frame(width: 8, height: 8)
         }
+        .animation(.easeInOut(duration: 0.15), value: isMultiButtonHovered)
         .contentShape(Rectangle())
+        .onHover { hovering in
+            isMultiButtonHovered = hovering
+        }
         .onTapGesture {
             viewModel.executeSelectedMultiAction()
         }
