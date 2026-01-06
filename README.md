@@ -30,7 +30,13 @@
 <br>
 
 <div align="center">
-  <img src="./assets/NotchSwitch-logo-black33-non-metallic-y-500.png" alt="NotchSwitch Screenshot" width="600"/>
+  <img src="./assets/screenshot.png" alt="NotchSwitch Screenshot" width="600"/>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/NotchSwitch-logo-black50-non-metallic-y.png" alt="NotchSwitch Logo" width="300"/>
 </div>
 
 <br>
