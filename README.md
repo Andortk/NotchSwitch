@@ -34,11 +34,7 @@
 </div>
 
 <br>
-
-<div align="center">
-  <img src="./assets/NotchSwitch-logo-black50-non-metallic-y.png" alt="NotchSwitch Logo" width="300"/>
-</div>
-
+<br>
 <br>
 
 ---
