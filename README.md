@@ -265,7 +265,7 @@ copies or substantial portions of the Software.
 
 If you find NotchSwitch useful, consider supporting development with a small donation.
 
-[Buy me a coffee](https://buymeacoffee.com/)
+[Buy me a coffee](https://buymeacoffee.com/andortk)
 
 ---
 
